@@ -1,0 +1,151 @@
+:root {
+    --b: #F8E7DB;
+    --w: #FFFFFF;
+    --bw: #F2F4FF;
+    --lb: #A9D3FF;
+    --bl: #155A8B;
+    --db: #201E50;
+}
+
+*{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+    margin-left: 0%;
+    margin-top: 0%;
+}
+
+header{
+    color: var(--w);
+    background-color: var(--bl);
+    height: 9vh;
+    width: 100vw;
+    border-bottom: 1vh solid var(--lb);
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;      
+
+}
+
+header h1{
+    margin-left: -12%;
+}
+
+header ul{
+    width: 50vw;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+
+header a{
+    color: var(--w);
+}
+
+header div{
+    border-radius: 100px;
+    width: 1.8%;
+    height: 80%;
+    margin-right: -12%;
+}
+
+header div img{
+    height: 100%;
+    width: 200%;
+    border-radius: 100px;   
+}
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        margin-left: 0%;
+    }
+    
+    header div {
+        margin-right: 0%;
+        width: 4%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    header h1 {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    
+    header ul {
+        margin-left: -50%;
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    
+    header div {
+        width: 8%;
+        margin-right: 15%;
+    }
+}
+
+footer {
+    background-color: var(--bl);
+    color: var(--w);
+    padding: 20px;
+    width: 100.1vw;
+    border-top: 1vh solid var(--lb);
+    border-bottom: 1vh solid var(--db);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    margin: 0 2%;
+    padding: 0;
+    display: flex;
+}
+
+footer li {
+    margin: 0 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--w);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer li {
+        margin: 10px 0;
+    }
+}
