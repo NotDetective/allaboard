@@ -37,7 +37,7 @@
 
         <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email">
 
-        <input passwordInput onchange="passwordRequirers(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password">
+        <input passwordInput onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password">
         <input type="checkbox" onclick="showPasswordRegister()"> Show Password
 
         <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
