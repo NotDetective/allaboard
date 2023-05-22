@@ -4,27 +4,34 @@ const wrongColor = 'red';
 var passwordMeetRequirements = 0;
 
 const registerFunction = () => {
-    const form = document.getElementById('register-from');
+    const form = document.querySelector('#register-from');
+
+    let passwordContainsSpace = containsSpace();
  
     console.log(passwordMeetRequirements);
 
-    //the if statment that wont work for god knows why 
-    if (passwordMeetRequirements != 1) {
+    if(passwordContainsSpace== false && passwordMeetRequirements != 1){
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            alert('password does not meet requirements');
-          
+            alert('Password, email or name can not contain a space and the password does not meet requirements');
         });
+    }else{
+        if (passwordContainsSpace == false) {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Password, email or name can not contain a space');
+            });
+        } 
+    
+        //the if statment that wont work for god knows why 
+        if (passwordMeetRequirements != 1) {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Password does not meet requirements');
+            });
+        }
     }
 
-    if (containsSpace() != 1) {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            alert('password, email or name can not contain a space');
-           
-        });
-    }    
-    
 }
 
 const containsSpace = () => {
@@ -128,47 +135,6 @@ const changeColorPasswordCheck = (containUpercase , containLowercase, containNum
         
     
 }
-
-// const passwordRequirers = (id) => {
-
-//     passwordRequirements = 0;
-
-//     const SpecialCharacters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-
-//     const passwordFieldElement = document.querySelector('#' + id);
-
-//     if (passwordFieldElement.value.length >= 8) {
-//         PRLength.style.color = 'red';
-//     }else{
-//         PRLength.style.color = 'black';
-//     }
-
-//     if (passwordFieldElement.value.match(SpecialCharacters)) {
-//         PRSpecialCharacter.style.color = 'red';
-//     }else{
-//         PRSpecialCharacter.style.color = 'black'; 
-//     }
-
-//     if(passwordFieldElement.value.match(/[A-Z]/)){
-//         PRUpercase.style.color = 'red';
-//     }else{
-//         PRUpercase.style.color = 'black'; 
-
-//     }
-
-//     if(passwordFieldElement.value.match(/[a-z]/)){
-//         PRLowercase.style.color = 'red';
-//     }else{
-//         PRLowercase.style.color = 'black'; 
-//     }
-
-//     if(passwordFieldElement.value.match(/[0-9]/)){
-//         PRNumber.style.color = 'red';
-//     }else{
-//         PRNumber.style.color = 'black';
-//     }
-
-// }
 
 const showPasswordLogin = () =>{
     
