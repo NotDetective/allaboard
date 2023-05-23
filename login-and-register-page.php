@@ -24,7 +24,7 @@
 
     <form name="login" action="login-and-register-page.php" method="POST">
 
-        <input name="emailLogin" type="email" placeholder="Enter email">
+        <input name="emailLogin" type="text" placeholder="Enter email">
 
         <input passwordInput name="passwordLogin" type="password" placeholder="Enter password">
 
@@ -67,13 +67,14 @@ if (isset($_POST['loginSubmit'])) {
 
     $stmt = $conn->prepare("SELECT email, password, role FROM users WHERE email=:email AND password=:password");
 
-    $stmt->execute(['username' => $email, 'password' => $password]);
+    $stmt->execute(['email' => $email, 'password' => $password]);
     $row = $stmt->fetch();
 
-    $_SESSION['username'] = $email;
+    if ($row['email'] == $email && $row['password'] == $password) {
+        $_SESSION['users-name'] = $row['name'];
+        $_SESSION['users-id'] = $row['id'];
 
-    if ($row['username'] == $email and $row['password'] == $password) {
-        
+        header('Location: index.php');
     }
 
 }
