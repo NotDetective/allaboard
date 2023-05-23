@@ -1,52 +1,40 @@
 const correctColor = 'green';
 const wrongColor = 'red';
 
-var passwordMeetRequirements = 0;
+let passwordMeetRequirements = false;
 
 const registerFunction = () => {
-    const form = document.querySelector('#register-from');
+    const form = document.querySelector('#register-from').addEventListener("click", function(event){
 
-    let passwordContainsSpace = containsSpace();
- 
-    console.log(passwordMeetRequirements);
-
-    if(passwordContainsSpace== false && passwordMeetRequirements != 1){
-        form.addEventListener('submit', (event) => {
+        if (passwordMeetRequirements == false) {
             event.preventDefault();
-            alert('Password, email or name can not contain a space and the password does not meet requirements');
-        });
-    }else{
-        if (passwordContainsSpace == false) {
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                alert('Password, email or name can not contain a space');
-            });
-        } 
-    
-        //the if statment that wont work for god knows why 
-        if (passwordMeetRequirements != 1) {
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                alert('Password does not meet requirements');
-            });
+            alert('Password does not meet requirements');
         }
-    }
+        
+        if (containsSpace() == true) {
+            event.preventDefault();
+            alert('Password or username can not contain space');
+        }
+            
+    }); 
 
+    
+    
 }
 
 const containsSpace = () => {
     const nameFieldElement = document.querySelector('#nameRegister');
     const passwordFieldElement = document.querySelector('#passwordRegister');
     if (!nameFieldElement.value.includes(' ') && !passwordFieldElement.value.includes(' ')) {
-        return true;
-    }else{
         return false;
+    }else{
+        return true;
     }
 }
 
 const passwordRequirersCheck = (id) => {
     
-    passwordMeetRequirements = 0;
+    passwordMeetRequirements = false;
 
     let containUpercase = false;
     let containLowercase = false;
@@ -91,7 +79,7 @@ const passwordRequirersCheck = (id) => {
     changeColorPasswordCheck(containUpercase , containLowercase, containNumber, containSpecialCharacter, containLength);
 
     if (containLowercase != false && containUpercase != false && containNumber != false && containSpecialCharacter != false && containLength != false) {
-        passwordMeetRequirements = 1;    
+        passwordMeetRequirements = true;    
     } 
 }
 

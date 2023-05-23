@@ -31,11 +31,11 @@
         <button name="loginSubmit" type="submit">Login</button>
     </form>
 
-    <form id="register-from" name="register" action="login-and-register-page.php" method="POST">
+    <form id="register-from" name="register" action="login-and-register-page.php" method="POST" >
 
         <input id="nameRegister" name="nameRegister" type="text" placeholder="Enter name">
 
-        <input id="emailRegister" name="emailRegister" type="text" placeholder="Enter email">
+        <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email">
 
         <input passwordInput onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password">
         <input type="checkbox" onclick="showPasswordRegister()"> Show Password
@@ -78,8 +78,7 @@ if (isset($_POST['loginSubmit'])) {
 
 }
 
-//isset($_POST['registerSubmit']) 
-if(false){
+if(isset($_POST['registerSubmit']) ){
 
     $name = $_POST['nameRegister'];
     $email = $_POST['emailRegister'];
