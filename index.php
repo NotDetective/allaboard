@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    require_once 'pages/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
     <title>All Aboard!</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="/#" type="image/x-icon">
+    <link rel="shortcut icon" href="/#icon" type="image/x-icon">
 </head>
 <body>
     <?php include'header.php'; ?>
