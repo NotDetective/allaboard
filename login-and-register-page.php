@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    require_once 'pages/conn.php';
-    
+session_start();
+require_once 'pages/conn.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@
         <button name="loginSubmit" type="submit">Login</button>
     </form>
 
-    <form id="register-from" name="register" action="login-and-register-page.php" method="POST" >
+    <form id="register-from" name="register" action="login-and-register-page.php" method="POST">
 
         <input id="nameRegister" name="nameRegister" type="text" placeholder="Enter name">
 
@@ -76,22 +76,21 @@ if (isset($_POST['loginSubmit'])) {
 
         header('Location: index.php');
     }
-
 }
 
-if(isset($_POST['registerSubmit']) ){
+if (isset($_POST['registerSubmit'])) {
 
     $name = $_POST['nameRegister'];
     $email = $_POST['emailRegister'];
     $password = $_POST['passwordRegister'];
-    
+
     $data = [
         'name' => $name,
         'email' => $email,
         'password' => $password
     ];
 
-    
+
     $sql = "INSERT INTO users (name, email, password) VALUES (:name, :email, :password)";
 
     $stmt = $conn->prepare($sql);
