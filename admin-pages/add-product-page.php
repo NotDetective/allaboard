@@ -27,20 +27,19 @@ $class = $stmt->fetchAll();
 <body>
     <!-- <?php include '../header.php'  ?> -->
 
-    <form name="add-product" method="POST" action="pages/add-product.php" enctype="multipart/form-data">
-        <?php $rand=rand(); $_SESSION['rand']=$rand;?>
-        <input type="hidden" value="<?php echo $rand; ?>" name="randcheck"/>
+    <form id="add-product-form" name="add-product" action="pages/add-product.php" method="POST" enctype="multipart/form-data">
     
         <!-- every thing in the form can be moved if needed -->
-        <input type="text" name="product-name" placeholder="Product Name">
 
-        <textarea cols="30" rows="10" name="product-description" placeholder="Product Description" placeholder="Product Description"></textarea>
+        <input add_product_input type="text" name="product-name" placeholder="Product Name">
 
-        <input type="number" name="product-price" placeholder="Product Price">
+        <textarea add_product_input cols="30" rows="10" name="product-description" placeholder="Product Description" placeholder="Product Description"></textarea>
 
-        <input type="number" name="product-discount" placeholder="Product Discount">
+        <input add_product_input type="number" name="product-price" placeholder="Product Price" step="0.01">
 
-        <input type="number" name="travel-time" placeholder="travel-time">
+        <input type="number" name="product-discount" placeholder="Product Discount" step="0.01">
+
+        <input add_product_input type="number" name="travel-time" placeholder="travel-time" step="0.01">
 
         <select name="class_options" id="class-options">
             <?php foreach ($class as $c) :  ?>
@@ -58,19 +57,21 @@ $class = $stmt->fetchAll();
             <?php endforeach ?>
         </select>
 
-        <input type="date" name="departure-date" placeholder="Departure date">
+        <input add_product_input type="date" name="departure-date" placeholder="Departure date">
 
-        <input type="text" name="departure-time" placeholder="Departure Time">
+        <input add_product_input type="text" name="departure-time" placeholder="Departure Time">
 
-        <input type="file" name="product-image" accept="image/png, image/jpeg, image/jpg, image/gif">
+        <input add_product_input type="file" name="product-image" accept="image/png, image/jpeg, image/jpg, image/gif">
 
-        <input type="submit" name="submit" value="Add Product">
+        <input type="submit" name="submit" value="Add Product" onclick="checkIfEmpty();">
     </form>
 
     <!-- <?php include '../footer.php' ?> -->
-    <script src="main.js"></script>
+    <script src="../js/add-product.js"></script>
 </body>
 
 </html>
 <?php
-echo $_SESSION['statusMsg'];
+    echo $_SESSION['statusMsg'];
+    $_SESSION['statusMsg'] = "";
+
