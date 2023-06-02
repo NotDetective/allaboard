@@ -59,7 +59,7 @@ $class = $stmt->fetchAll();
 
         <input add_product_input type="date" name="departure-date" placeholder="Departure date" required>
 
-        <input add_product_input type="text" name="departure-time" placeholder="Departure Time" required>
+        <input add_product_input type="time" name="departure-time" placeholder="Departure Time" required>
 
         <input add_product_input type="file" name="product-image" accept="image/png, image/jpeg, image/jpg, image/gif" required>
 
@@ -77,6 +77,8 @@ $class = $stmt->fetchAll();
 
 </html>
 <?php
-    echo $_SESSION['statusMsg'];
+    if (isset($_SESSION['statusMsg'])) {
+        echo $_SESSION['statusMsg'];
+    }
     $_SESSION['statusMsg'] = "";
 

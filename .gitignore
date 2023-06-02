@@ -12,3 +12,5 @@
 /upload-product-images/*.png
 /upload-product-images/*.gif
 /upload-product-images/*.jpeg
+
+temp_*
