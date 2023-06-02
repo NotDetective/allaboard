@@ -1,0 +1,16 @@
+
+!/upload-user-images
+
+/upload-user-images/*.jpg
+/upload-user-images/*.png
+/upload-user-images/*.gif
+/upload-user-images/*.jpeg
+
+!/upload-product-images
+
+/upload-product-images/*.jpg
+/upload-product-images/*.png
+/upload-product-images/*.gif
+/upload-product-images/*.jpeg
+
+temp_*

@@ -4,7 +4,7 @@ const wrongColor = 'red';
 let passwordMeetRequirements = false;
 
 const registerFunction = () => {
-    const form = document.querySelector('#register-from').addEventListener("click", function(event){
+    const form = document.querySelector('#register-from').addEventListener("click", (event) => {
 
         if (passwordMeetRequirements == false) {
             event.preventDefault();
@@ -13,7 +13,7 @@ const registerFunction = () => {
         
         if (containsSpace() == true) {
             event.preventDefault();
-            alert('Password or username can not contain space');
+            alert('Password can not contain space');
         }
             
     }); 
@@ -125,7 +125,12 @@ const changeColorPasswordCheck = (containUpercase , containLowercase, containNum
 }
 
 const showPasswordLogin = () =>{
-    
+    const passwordInputElement = document.querySelector("#passwordLogin");
+    if (passwordInputElement.type === "password") {
+        passwordInputElement.type = "text";
+    } else {
+        passwordInputElement.type = "password";
+    }
 }
 
 const showPasswordRegister = () => {
