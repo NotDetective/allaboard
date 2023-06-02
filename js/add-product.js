@@ -1,23 +1,23 @@
-const checkIfEmpty = () => {
+const checkIfEmpty = (event) => {
     const form = document.querySelector('#add-product-form');
     const inputs = form.querySelectorAll('[add_product_input]');
+    const dialog = document.querySelector('#dialog-add-product');
 
-    let empty = false;
+
 
     inputs.forEach(input => {
-        if (empty == false){
-            console.log(input.name);
-            console.log(input.value);
-            if (input.value === '') {
-                empty = true;
-            }
+        console.log(input.name);
+        console.log(input.value);
+        if (input.value == '') {
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                dialog.showModal();
+            });
         }
     });
+}
 
-    if (empty == true) {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            alert('please fill in all the fields');
-        });
-    }
+const closeDialog = () => {
+    const dialog = document.querySelector('#dialog-add-product');
+    dialog.close();
 }
