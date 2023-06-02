@@ -47,6 +47,10 @@
     </div>
 
 
+    <dialog id="dialog-account-register">
+        <h1>password does not meet requirements</h1>
+        <button onclick="closeDialog('#dialog-account-register');"><h1>close</h1"></button>
+    </dialog>
     <!-- <?php include 'footer.php'; ?> -->
     <script src="js/account.js"></script>
     <script src="js/main.js"></script>

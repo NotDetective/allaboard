@@ -4,22 +4,29 @@ const wrongColor = 'red';
 let passwordMeetRequirements = false;
 
 const registerFunction = () => {
-    const form = document.querySelector('#register-from').addEventListener("click", (event) => {
+    const dialog = document.querySelector('#dialog-account-register');
+    const form = document.querySelector('#register-from')
+
+
+    form.addEventListener("submit", (event) => {
 
         if (passwordMeetRequirements == false) {
             event.preventDefault();
-            alert('Password does not meet requirements');
+            dialog.showModal();
+
         }
-        
+
         if (containsSpace() == true) {
             event.preventDefault();
-            alert('Password can not contain space');
+            dialog.showModal();
         }
-            
-    }); 
 
-    
-    
+    });
+}
+
+const closeDialog = (id) => {
+    const dialog = document.querySelector(id);
+    dialog.close();
 }
 
 const containsSpace = () => {
@@ -27,13 +34,13 @@ const containsSpace = () => {
     const passwordFieldElement = document.querySelector('#passwordRegister');
     if (!nameFieldElement.value.includes(' ') && !passwordFieldElement.value.includes(' ')) {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
 
 const passwordRequirersCheck = (id) => {
-    
+
     passwordMeetRequirements = false;
 
     let containUpercase = false;
@@ -63,7 +70,7 @@ const passwordRequirersCheck = (id) => {
             if (element.match(SpecialCharacters)) {
                 containSpecialCharacter = true;
             }
-        } 
+        }
         if (containNumber != true) {
             if (element.match(/[0-9]/)) {
                 containNumber = true;
@@ -73,58 +80,58 @@ const passwordRequirersCheck = (id) => {
             if (inputtedPassword.length >= 8) {
                 containLength = true;
             }
-        }  
+        }
     });
 
-    changeColorPasswordCheck(containUpercase , containLowercase, containNumber, containSpecialCharacter, containLength);
+    changeColorPasswordCheck(containUpercase, containLowercase, containNumber, containSpecialCharacter, containLength);
 
     if (containLowercase != false && containUpercase != false && containNumber != false && containSpecialCharacter != false && containLength != false) {
-        passwordMeetRequirements = true;    
-    } 
+        passwordMeetRequirements = true;
+    }
 }
 
-const changeColorPasswordCheck = (containUpercase , containLowercase, containNumber, containSpecialCharacter, containLength) => {
+const changeColorPasswordCheck = (containUpercase, containLowercase, containNumber, containSpecialCharacter, containLength) => {
     const PRUpercase = document.querySelector('#passwordRequirementsUpercase');
     const PRLowercase = document.querySelector('#passwordRequirementsLowercase');
     const PRNumber = document.querySelector('#passwordRequirementsNumber');
     const PRSpecialCharacter = document.querySelector('#passwordRequirementsSpecialCharacter');
     const PRLength = document.querySelector('#passwordRequirementsLength');
-    
+
 
     if (containUpercase == true) {
         PRUpercase.style.color = correctColor;
-    }else{
+    } else {
         PRUpercase.style.color = wrongColor;
     }
 
     if (containLowercase == true) {
         PRLowercase.style.color = correctColor;
-    }else{
+    } else {
         PRLowercase.style.color = wrongColor;
     }
 
     if (containNumber == true) {
         PRNumber.style.color = correctColor;
-    }else{
+    } else {
         PRNumber.style.color = wrongColor;
     }
 
     if (containSpecialCharacter == true) {
         PRSpecialCharacter.style.color = correctColor;
-    }else{
+    } else {
         PRSpecialCharacter.style.color = wrongColor;
     }
 
     if (containLength == true) {
         PRLength.style.color = correctColor;
-    }else{
+    } else {
         PRLength.style.color = wrongColor;
-    } 
-        
-    
+    }
+
+
 }
 
-const showPasswordLogin = () =>{
+const showPasswordLogin = () => {
     const passwordInputElement = document.querySelector("#passwordLogin");
     if (passwordInputElement.type === "password") {
         passwordInputElement.type = "text";
