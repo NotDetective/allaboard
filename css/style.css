@@ -17,6 +17,7 @@ body{
     overflow-x: hidden;
     margin-left: 0%;
     margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 header{
@@ -109,6 +110,7 @@ footer {
     color: var(--w);
     padding: 20px;
     width: 100.1vw;
+    height: 5vh;
     border-top: 1vh solid var(--lb);
     border-bottom: 1vh solid var(--db);
 }
