@@ -18,34 +18,69 @@
 
 <body>
 
-    <!-- <?php include 'header.php'; ?> -->
+    <?php include 'header.php'; ?>
 
-    <form id="login-from" name="login" action="pages/login.php" method="POST">
-        <input id="emailLogin" name="emailLogin" type="text" placeholder="Enter email" require>
+    <main>
+        <div class="login-and-register-title">
+            login/register
+        </div>
+        <div class="login-and-register-flexBox">
+            <div class="login-flexBox">
+                <div class="login-title">login</div>
+                <form name="login" action="pages/login.php" method="POST">
+                    <input id="emailLogin" name="emailLogin" type="text" placeholder="Enter email" require>
 
-        <input id="passwordLogin" name="passwordLogin" type="password" placeholder="Enter password" require>
-        <input type="checkbox" onclick="showPasswordLogin()"> Show Password
+                    <input id="passwordLogin" name="passwordLogin" type="password" placeholder="Enter password" require>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" onclick="showPasswordLogin()"> Show Password
+                    </div>
 
-        <button name="loginSubmit" type="submit" onclick="loginFunction()">Login</button>
-    </form>
+                    <button name="loginSubmit" type="submit" onclick="loginFunction()">Login</button>
+                </form>
+            </div>
+            <div class="register-flexBox">
+            <div class="register-title">register</div>
+              
+                <form id="register-from" name="register" action="pages/register.php" method="POST" >
+                  
+                     <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email" require>
 
-    <form id="register-from" name="register" action="pages/register.php" method="POST" >
-        <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email">
+                     <input onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password" require>
+                    <div>
+                        <input type="checkbox" onclick="showPasswordRegister()"> Show Password
+                    </div>
 
-        <input onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password">
-        <input type="checkbox" onclick="showPasswordRegister()"> Show Password
+                    <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
+                </form>
+            </div>
 
-        <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
-    </form>
+                    
 
-    <div>
-        <p id="passwordRequirementsUpercase">Contains upercase letter</p>
-        <p id="passwordRequirementsLowercase">Contains lowercase letter</p>
-        <p id="passwordRequirementsNumber">Contains number</p>
-        <p id="passwordRequirementsSpecialCharacter">Contains special character</p>
-        <p id="passwordRequirementsLength">Password length is at least 8 characters long</p>
-    </div>
+        </div>
+        <div class="password-requirements-title">password requirements</div>
+        <div class="password-requirements">
+                <div>
+                    <p id="passwordRequirementsUpercase">Contains upercase letter</p>
+                </div>
+                <div>
+                    <p id="passwordRequirementsLowercase">Contains lowercase letter</p>
+                </div>
+                <div>
+                    <p id="passwordRequirementsNumber">Contains number</p>
+                </div>
+                <div>
+                    <p id="passwordRequirementsSpecialCharacter">Contains special character</p>
+                </div>
+                <div>
+                    <p id="passwordRequirementsLength">Password length is at least 8 characters long</p>
+                </div>
+            </div>
 
+
+    </main>
+
+    <?php include 'footer.php'; ?>
 
     <dialog id="dialog-account-register">
         <h1>password does not meet requirements</h1>
@@ -56,7 +91,7 @@
         <h1 id='login-error'></h1>
         <button onclick="closeDialog('#dialog-account-login');"><h1>close</h1"></button>
     </dialog>
-    <!-- <?php include 'footer.php'; ?> -->
+  
     <script src="js/account.js"></script>
     <?php if(isset($_SESSION['error'])):?>
 
