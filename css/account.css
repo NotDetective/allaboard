@@ -1,0 +1,171 @@
+:root {
+    --b: #F8E7DB;
+    --w: #FFFFFF;
+    --bw: #F2F4FF;
+    --lb: #A9D3FF;
+    --bl: #155A8B;
+    --db: #201E50;
+}
+
+.login-and-register-title{
+    margin-top: 2.5vh;
+    width: 200px;
+    height: 50px;
+
+    color: var(--w);
+    background: var(--bl);
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;  
+}
+
+.login-and-register-flexBox{
+    margin: auto;
+    height: 49.5vh;
+    width: 75%;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.login-flexBox{
+    height: 80%;
+    width: 25%;
+
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+
+form div input{
+    margin-left: 25%;
+    width: auto;
+    height: auto;
+}
+
+form input{
+
+    width: 300px;
+    height: 50px;
+    margin-bottom: 3%;
+
+    background: #A9D3FF;
+    border-radius: 40px;
+}
+
+button{
+    transition: transform 0.3s;
+    margin-left: 17.5%;
+    width: 200px;
+    height: 50px;
+
+    color: var(--w);
+    background-color: var(--db);
+    border-radius: 40px;
+}
+
+button:hover {
+    animation: buttonAnimation 1s forwards;
+    color: var(--w);
+    background-color: var(--bl);
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.register-flexBox{
+    height: 80%;
+    width: 25%;
+
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+}
+
+.password-requirements{
+    margin-top: 2.76%;
+    margin-bottom: 3%;
+    display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.password-requirements div{
+    font-size: 90%;
+    color: black;
+    width: auto;
+    height: auto;
+    background-color: var(--lb);
+    border-radius: 10px;
+}
+
+.login-title{
+    margin-bottom: 2%;
+    height: 17.5%;
+    width: 60%;
+    background-color: var(--bl);
+    color: var(--w);
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.register-title{
+    margin-bottom: 2%;
+    height: 17.5%;
+    width: 60%;
+    background-color: var(--bl);
+    color: var(--w);
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.password-requirements-title{
+    margin: auto;
+    margin-bottom: -1%;
+    height: 20%;
+    width: 20%;
+    background-color: var(--bl);
+    color: var(--w);
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
