@@ -20,13 +20,13 @@
 
     <!-- <?php include 'header.php'; ?> -->
 
-    <form name="login" action="pages/login.php" method="POST">
-        <input name="emailLogin" type="text" placeholder="Enter email">
+    <form id="login-from" name="login" action="pages/login.php" method="POST">
+        <input id="emailLogin" name="emailLogin" type="text" placeholder="Enter email" require>
 
-        <input id="passwordLogin" name="passwordLogin" type="password" placeholder="Enter password">
+        <input id="passwordLogin" name="passwordLogin" type="password" placeholder="Enter password" require>
         <input type="checkbox" onclick="showPasswordLogin()"> Show Password
 
-        <button name="loginSubmit" type="submit">Login</button>
+        <button name="loginSubmit" type="submit" onclick="loginFunction()">Login</button>
     </form>
 
     <form id="register-from" name="register" action="pages/register.php" method="POST" >
@@ -47,10 +47,24 @@
     </div>
 
 
+    <dialog id="dialog-account-register">
+        <h1>password does not meet requirements</h1>
+        <button onclick="closeDialog('#dialog-account-register');"><h1>close</h1"></button>
+    </dialog>
+
+    <dialog id="dialog-account-login">
+        <h1 id='login-error'></h1>
+        <button onclick="closeDialog('#dialog-account-login');"><h1>close</h1"></button>
+    </dialog>
     <!-- <?php include 'footer.php'; ?> -->
     <script src="js/account.js"></script>
-    <script src="js/main.js"></script>
-</body>
+    <?php if(isset($_SESSION['error'])):?>
 
+        <script>
+            openDialogAndSetContent('#dialog-account-login', '#login-error' ,'<?php echo $_SESSION['error']; ?>');
+        </script>
+    
+    <?php endif;  $_SESSION['error'] = null; ?>
+</body>
 </html>
 

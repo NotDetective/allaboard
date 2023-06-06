@@ -1,4 +1,7 @@
 <?php
+
+require_once "../pages/conn.php";
+
 if(isset($_POST['registerSubmit']))
 {
     $email = $_POST['emailRegister'];
