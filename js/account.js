@@ -148,3 +148,30 @@ const showPasswordRegister = () => {
         passwordInputElement.type = "password";
     }
 }
+
+const loginFunction = () => {
+    const passwordFieldElement = document.querySelector('#passwordLogin');
+    const emailFieldElement = document.querySelector('#emailLogin');
+    const form = document.querySelector('#login-from');
+    const dialog = document.querySelector('#dialog-account-login');
+    const loginError = document.querySelector('#login-error');
+
+    form.addEventListener("submit", (event) => {
+
+        if (passwordFieldElement.value == "" || emailFieldElement.value == "") {
+
+            loginError.textContent = "Please fill in all fields";
+            event.preventDefault();
+            dialog.showModal();
+
+        }
+
+    });
+}
+
+const openDialogAndSetContent = (id, idTextElement, content) => {
+    const dialog = document.querySelector(id);
+    dialog.querySelector(idTextElement).textContent = content;
+    dialog.showModal();
+
+}
