@@ -16,30 +16,7 @@
 <body>
     <?php include'header.php'; ?>
     <main>
-        <?php
-        echo"<div class='menu'>";
-            for ($i=0; $i <= 4; $i++) { 
-                echo "<div class='toprated'>
-                            <h2>Top rated</h2>
-                            <div></div>
-                            <p></p>
-                            <p></p>
-                        </div>";
-            }
-            echo "</div>"  ;
-            echo"<div class='menu'>";
-            for ($i=0; $i <= 4; $i++) { 
-                echo "<div class='toprated'>
-                            <h2>deals</h2>
-                            <div></div>
-                            <p></p>
-                            <p></p>
-                        </div>";
-            }
-            echo "</div>";
-        ?>
-
-            <div class="containerss">
+            <div class="containerss"> 
                 <div class="flexbox">
                     <div class="overlayss">
                         <div>test</div>
@@ -53,6 +30,8 @@
             </div>
 
             <div class="containerTicket">
+
+            <div class="ticketPlaceholder"></div>
                 <?php
                 // maak de "for", een "foreach" statement.
                     for ($i=0; $i <= 19; $i++) { 
@@ -68,7 +47,7 @@
                                     <p class='time'>time</p>
                                 </div>
                                 <div class='priceContainer'>
-                                    <p class='price'>price</p>
+                                    <p class='price'>price</p>  
                                     <div>
                                         <a href='/#'></a>
                                     </div>
@@ -77,6 +56,7 @@
                             </div>";
                     }
                 ?>
+                <div class="ticketPlaceholder"></div>
             </div>
 
     </main>
