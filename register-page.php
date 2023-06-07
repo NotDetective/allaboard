@@ -21,9 +21,6 @@
     <?php include 'header.php'; ?>
 
     <main>
-        <div class="login-and-register-title">
-            login/register
-        </div>
         <div class="login-and-register-flexBox">
             <div class="login-flexBox">
                 <div class="login-title">login</div>
@@ -73,10 +70,10 @@
                     <p id="passwordRequirementsSpecialCharacter">Contains special character</p>
                 </div>
                 <div>
-                    <p id="passwordRequirementsLength">Password length is at least 8 characters long</p>
+                    <p id="passwordRequirementsLength">Password 8 characters required</p>
                 </div>
             </div>
-
+        </div>
 
     </main>
 

@@ -7,6 +7,7 @@
     --db: #201E50;
 }
 
+
 .login-and-register-title{
     margin-top: 2.5vh;
     width: 200px;
@@ -28,7 +29,7 @@
 
 .login-and-register-flexBox{
     margin: auto;
-    height: 49.5vh;
+    height: 77.6vh;
     width: 75%;
 
     display: flex;
@@ -81,7 +82,6 @@ button{
 button:hover {
     animation: buttonAnimation 1s forwards;
     color: var(--w);
-    background-color: var(--bl);
     border-radius: 20px;
     transform: scale(1.1);
 }
@@ -108,28 +108,30 @@ button:hover {
 }
 
 .password-requirements{
+    height: 52.5%;
+    
+    background-color: var(--lb);
     margin-top: 2.76%;
     margin-bottom: 3%;
     display: flex;
-	flex-direction: row-reverse;
+	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
 	align-content: center;
+    border-radius: 20px;
 }
 
-.password-requirements div{
-    font-size: 90%;
-    color: black;
+.password-requirements div p{
+    font-size: 90%; 
     width: auto;
     height: auto;
-    background-color: var(--lb);
     border-radius: 10px;
 }
 
 .login-title{
     margin-bottom: 2%;
-    height: 17.5%;
+    height: 10%;
     width: 60%;
     background-color: var(--bl);
     color: var(--w);
@@ -159,7 +161,7 @@ button:hover {
     margin: auto;
     margin-bottom: -1%;
     height: 20%;
-    width: 20%;
+    width: 90%;
     background-color: var(--bl);
     color: var(--w);
     border-radius: 30px;
@@ -168,4 +170,40 @@ button:hover {
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+.register-link{
+    text-decoration: underline;
+
+
+    transition: transform 0.3s; 
+    width: 200px;
+    height: 50px;
+
+    color: var(--w);
+    background-color: var(--lb);
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.register-link:hover {
+
+    animation: buttonAnimation2 1s forwards;
+    color: var(--w);
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+@keyframes buttonAnimation2 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
