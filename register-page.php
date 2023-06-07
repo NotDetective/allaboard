@@ -21,24 +21,7 @@
     <?php include 'header.php'; ?>
 
     <main>
-        <div class="login-and-register-title">
-            login/register
-        </div>
         <div class="login-and-register-flexBox">
-            <div class="login-flexBox">
-                <div class="login-title">login</div>
-                <form name="login" action="pages/login.php" method="POST">
-                    <input name="emailLogin" type="text" placeholder="Enter email">
-
-                    <input id="passwordLogin" name="passwordLogin" type="password" placeholder="Enter password">
-                    
-                    <div class="checkbox">
-                        <input type="checkbox" onclick="showPasswordLogin()"> Show Password
-                    </div>
-
-                    <button name="loginSubmit" type="submit">Login</button>
-                </form>
-            </div>
             <div class="register-flexBox">
             <div class="register-title">register</div>
                 <form id="register-from" name="register" action="pages/register.php" method="POST" >
@@ -53,9 +36,8 @@
                 </form>
             </div>
 
-        </div>
-        <div class="password-requirements-title">password requirements</div>
-        <div class="password-requirements">
+            <div class="password-requirements">
+                <div class="password-requirements-title">password requirements</div>
                 <div>
                     <p id="passwordRequirementsUpercase">Contains upercase letter</p>
                 </div>
@@ -69,10 +51,10 @@
                     <p id="passwordRequirementsSpecialCharacter">Contains special character</p>
                 </div>
                 <div>
-                    <p id="passwordRequirementsLength">Password length is at least 8 characters long</p>
+                    <p id="passwordRequirementsLength">Password 8 characters required</p>
                 </div>
             </div>
-
+        </div>
 
     </main>
 
