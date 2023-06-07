@@ -33,7 +33,7 @@
     width: 75%;
 
     display: flex;
-	flex-direction: row;
+	flex-direction: row;                  
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
@@ -130,8 +130,7 @@ button:hover {
 }
 
 .login-title{
-    margin-bottom: 2%;
-    height: 10%;
+    height: 5%;
     width: 60%;
     background-color: var(--bl);
     color: var(--w);
