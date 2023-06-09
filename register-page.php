@@ -23,23 +23,22 @@
     <main>
         <div class="login-and-register-flexBox">
             <div class="register-flexBox">
-            <div class="register-title">register</div>
-              
-                <form id="register-from" name="register" action="pages/register.php" method="POST" >
-                  
-                     <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email" require>
+                <div class="register-title">register</div>
+                
+                    <form id="register-from" name="register" action="pages/register.php" method="POST" >
+                    
+                        <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email" require>
 
-                     <input onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password" require>
-                    <div>
-                        <input type="checkbox" onclick="showPasswordRegister()"> Show Password
-                    </div>
+                        <input onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password" require>
+                        <div>
+                            <input type="checkbox" onclick="showPasswordRegister()"> Show Password
+                        </div>
 
-                    <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
-                </form>
-            </div>
-
-            <div class="password-requirements">
-                    <div class="password-requirements-title">password requirements</div>
+                        <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
+                    </form>
+                </div>
+                <div class="password-requirements">
+                    <div class="password-requirements-title">Password requirements</div>
                     <div>
                         <p id="passwordRequirementsUpercase">Contains upercase letter</p>
                     </div>
@@ -54,7 +53,8 @@
                     </div>
                     <div>
                         <p id="passwordRequirementsLength">Password 8 characters required</p>
-                    </div>
+                    </div>`
+                </div>
             </div>
         </div> 
 
