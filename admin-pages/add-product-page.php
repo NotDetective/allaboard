@@ -21,7 +21,6 @@ $class = $stmt->fetchAll();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/add-product.css">
     <link rel="shortcut icon" href="/#icon" type="image/x-icon">
-
 </head>
 
 <body>

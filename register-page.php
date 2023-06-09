@@ -69,19 +69,7 @@
         <button onclick="closeDialog('#dialog-account-register');"><h1>close</h1"></button>
     </dialog>
 
-    <dialog id="dialog-account-login">
-        <h1 id='login-error'></h1>
-        <button onclick="closeDialog('#dialog-account-login');"><h1>close</h1"></button>
-    </dialog>
-  
     <script src="js/account.js"></script>
-    <?php if(isset($_SESSION['error'])):?>
-
-        <script>
-            openDialogAndSetContent('#dialog-account-login', '#login-error' ,'<?php echo $_SESSION['error']; ?>');
-        </script>
-    
-    <?php endif;  $_SESSION['error'] = null; ?>
 </body>
 </html>
 
