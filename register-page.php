@@ -22,55 +22,38 @@
 
     <main>
         <div class="login-and-register-flexBox">
-            <div class="login-flexBox">
-                <div class="login-title">login</div>
-                <form name="login" action="pages/login.php" method="POST">
-                    <input id="emailLogin" name="emailLogin" type="text" placeholder="Enter email" require>
-
-                    <input id="passwordLogin" name="passwordLogin" type="password" placeholder="Enter password" require>
-                    
-                    <div class="checkbox">
-                        <input type="checkbox" onclick="showPasswordLogin()"> Show Password
-                    </div>
-
-                    <button name="loginSubmit" type="submit" onclick="loginFunction()">Login</button>
-                </form>
-            </div>
             <div class="register-flexBox">
-            <div class="register-title">register</div>
-              
-                <form id="register-from" name="register" action="pages/register.php" method="POST" >
-                  
-                     <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email" require>
-
-                     <input onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password" require>
-                    <div>
-                        <input type="checkbox" onclick="showPasswordRegister()"> Show Password
-                    </div>
-
-                    <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
-                </form>
-            </div>
-
+                <div class="register-title">register</div>
+                
+                    <form id="register-from" name="register" action="pages/register.php" method="POST" >
                     
+                        <input id="emailRegister" name="emailRegister" type="email" placeholder="Enter email" require>
 
-        </div>
-        <div class="password-requirements-title">password requirements</div>
-        <div class="password-requirements">
-                <div>
-                    <p id="passwordRequirementsUpercase">Contains upercase letter</p>
+                        <input onchange="passwordRequirersCheck(this.id)" id="passwordRegister" name="passwordRegister" type="password" placeholder="Enter password" require>
+                        <div>
+                            <input type="checkbox" onclick="showPasswordRegister()"> Show Password
+                        </div>
+
+                        <button onclick="registerFunction()" id="registerSubmit" name="registerSubmit" type="submit">Register</button>
+                    </form>
                 </div>
-                <div>
-                    <p id="passwordRequirementsLowercase">Contains lowercase letter</p>
-                </div>
-                <div>
-                    <p id="passwordRequirementsNumber">Contains number</p>
-                </div>
-                <div>
-                    <p id="passwordRequirementsSpecialCharacter">Contains special character</p>
-                </div>
-                <div>
-                    <p id="passwordRequirementsLength">Password 8 characters required</p>
+                <div class="password-requirements">
+                    <div class="password-requirements-title">Password requirements</div>
+                    <div>
+                        <p id="passwordRequirementsUpercase">Contains upercase letter</p>
+                    </div>
+                    <div>
+                        <p id="passwordRequirementsLowercase">Contains lowercase letter</p>
+                    </div>
+                    <div>
+                        <p id="passwordRequirementsNumber">Contains number</p>
+                    </div>
+                    <div>
+                        <p id="passwordRequirementsSpecialCharacter">Contains special character</p>
+                    </div>
+                    <div>
+                        <p id="passwordRequirementsLength">Password 8 characters required</p>
+                    </div>`
                 </div>
             </div>
         </div>

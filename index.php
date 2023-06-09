@@ -16,29 +16,6 @@
 <body>
     <?php include'header.php'; ?>
     <main>
-        <?php
-        echo"<div class='menu'>";
-            for ($i=0; $i <= 4; $i++) { 
-                echo "<div class='toprated'>
-                            <h2>Top rated</h2>
-                            <div></div>
-                            <p></p>
-                            <p></p>
-                        </div>";
-            }
-            echo "</div>"  ;
-            echo"<div class='menu'>";
-            for ($i=0; $i <= 4; $i++) { 
-                echo "<div class='toprated'>
-                            <h2>deals</h2>
-                            <div></div>
-                            <p></p>
-                            <p></p>
-                        </div>";
-            }
-            echo "</div>";
-        ?>
-
             <div class="containerss">
                 <div class="flexbox">
                     <div class="overlayss">
