@@ -76,8 +76,8 @@ $class = $stmt->fetchAll();
 
 </html>
 <?php
-    if (isset($_SESSION['statusMsg'])) {
-        echo $_SESSION['statusMsg'];
+    if (isset($_SESSION['statusMsgAddProduct'])) {
+        echo $_SESSION['statusMsgAddProduct'];
     }
-    $_SESSION['statusMsg'] = "";
+    $_SESSION['statusMsgAddProduct'] = "";
 
