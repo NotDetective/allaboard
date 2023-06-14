@@ -17,7 +17,7 @@ if(isset($_POST['registerSubmit']))
 
     $stmt = $conn->prepare($sql);
     $stmt->execute($data);
-    header('Location: ../index.php');
+    header('Location: ../login-page.php');
 }
 else{
     header('Location: ../index.php');
