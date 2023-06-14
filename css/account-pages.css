@@ -1,0 +1,238 @@
+:root {
+    --b: #F8E7DB;
+    --w: #FFFFFF;
+    --bw: #F2F4FF;
+    --lb: #A9D3FF;
+    --bl: #155A8B;
+    --db: #201E50;
+    }
+
+
+.whitespace{
+    height: 59.5px;
+}
+.whitespaceBig{
+    height: 200px;
+}
+
+.information-container{
+    height: 69.4vh;
+    width: auto;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.options-container{
+    text-decoration: none;
+    height: 40%;
+    width: auto;
+    color: var(--w);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.options-container a{
+    margin-right: 0%;
+    background-color: var(--lb);
+    margin-bottom: 10%;
+    width: 120%;
+    height: 27.5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.options-container a p{
+    margin-left: 5%;
+}
+
+.account-information-container{
+    text-decoration: none;
+    height: 60%;
+    width: 20%;
+    color: var(--w);
+}
+
+.account-information-container div{
+    color: var(--w);
+    background-color: var(--bl);
+    margin-bottom: 10%;
+    width: 100%;
+    height: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.account-information-container div p{
+    color: var(--w);
+    margin-left: 2%;
+}
+
+.change-profile-picture{
+    margin-right: 200%;
+    background-color: var(--lb);
+    margin-bottom: 10%;
+    width: 105%;
+    height: 10%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.other-container{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.profile-picture{
+    margin-left: 30%;
+}
+
+.logout-button{
+    width: 100px;
+    height: 50px;;
+
+    color: var(--w);
+    background: var(--db);
+    border: 3px solid var(--lb);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.delete-account-button p{
+    width: 100%;
+    height: auto;
+    color: var(--w);
+    background-color: red;
+    margin-left: 350%;
+}
+
+.saved-tickets-container{
+    height: 400px;
+    width: 50%;
+
+    background-color: var(--b);
+    border-radius: 20px;
+
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.saved-tickets-scroller{
+    height: 80%;
+    width: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.saved-ticket{
+    margin-top: 2%; 
+
+    border-radius: 20px;
+    width: 99%;
+    height: 100px;
+    background-color: var(--bl);
+    color: var(--w);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+.ticketPlaceholder {
+    border: 0vh solid white;
+    width: 85%;
+    max-width: 85%;
+    border-radius: 20px;
+    margin-top: 2%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .imgholder{   
+    height: 100%;
+    width: 20%;
+  }
+
+  .imgholder img{
+    height: 100%;
+    width: 100%;
+  }
+
+  
+  .ticketInfo{
+    margin-left: 5%;
+    color: var(--w);
+  }
+  
+  .description{
+    width: 40%;
+  }
+  
+  .priceContainer {
+    margin-left: 20%;
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    width: 50%;
+    height: 30%;
+    margin-right: 5%;
+    background-color: var(--bl);
+    border: 3px solid var(--db);
+    border-radius: 5px;
+  }
+  
+  .priceContainer p {
+    margin: 0;
+    padding: 10px;
+    color: var(--g);
+    font-weight: bold;
+  }
+  
+  .priceContainer a.arrow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--db);
+    background-color: var(--db);
+    color: var(--w);
+    font-size: 20px;
+    border-radius: 0px 5px 5px 0px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .priceContainer a.arrow-link:hover {
+    background-color: var(--bl);
+    border-color: var(--bl);
+    color: var(--w);
+    cursor: pointer;
+  }
+
+  .space{
+    height: 20vh;
+
+  }

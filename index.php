@@ -47,10 +47,8 @@
                                     <p class='time'>time</p>
                                 </div>
                                 <div class='priceContainer'>
-                                    <p class='price'>price</p>  
-                                    <div>
-                                        <a href='/#'></a>
-                                    </div>
+                                    <p>Price</p>
+                                    <a class='arrow-link' href='/page.html'>></a>
                                 </div>
 
                             </div>";
