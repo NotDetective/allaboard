@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 if (isset($_POST['submit'])) {
     require_once "conn.php";
@@ -11,12 +12,12 @@ if (isset($_POST['submit'])) {
         'product_id' => $product_id,
     ];
 
-    $stmt = $conn->prepare("SELECT * FROM saved_product WHERE user_id = :user_id AND product_id = :product_id");
+    $stmt = $conn->prepare("SELECT * FROM bookings WHERE user_id = :user_id AND product_id = :product_id");
     $stmt->execute($data);
     $row = $stmt->fetch();
 
     if (!$row) {
-        $sql = "INSERT INTO saved_product (user_id, product_id) VALUES (:user_id, :product_id)";
+        $sql = "INSERT INTO bookings (user_id, product_id) VALUES (:user_id, :product_id)";
 
         $stmt = $conn->prepare($sql);
         $stmt->execute($data);

@@ -55,13 +55,13 @@ $class = $stmt->fetch();
                     <img src="upload-product-images/<?php echo $product['image']; ?>" class="img" alt="Image" height="100%" width="100%">
                 </div>
                 <div class="otherInformation">
+                        <form action= "pages/add-to-cart.php" method="post">
+                            <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
+                            <button type="submit" name="submit" class="addcartButton">Add To card</button>
+                        </form>
                         <form action="pages/add-favorites.php" method="post">
                             <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
-                            <button type="submit" name="submit" class="addCardButton">Add To card</button>
-                        </form>
-                        <form action="pages/add-to-card.php" method="post">
-                            <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
-                            <button class="addFavButton">Add To Favorites</button>
+                            <button type="submit" name="submit" class="addFavButton">Add To Favorites</button>
                         </form>
                     <div class="priceBox">
                         <?php if ($product['discount'] == 0) : ?>
