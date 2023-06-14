@@ -102,9 +102,7 @@ main{
   margin-right: auto;
 }
 
-.imgholder{
-  margin-left: 2%;
-  height: 80%;
+.imgholder{  height: 80%;
   width: 40%;
   border-radius: 10px;
   background-color: #D9D9D9;
@@ -121,30 +119,43 @@ main{
 }
 
 .priceContainer {
+  margin-left: 20%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-}
-
-.price {
+  align-content: center;
+  width: 10%;
+  height: 10%;
   margin-right: 5%;
+  background-color: var(--bl);
+  border: 3px solid var(--db);
+  border-radius: 5px;
+  }
+
+.priceContainer p {
+  margin: 0;
+  padding: 10px;
   color: var(--g);
+  font-weight: bold;
 }
 
-.priceContainer a {
-  display: inline-block;
-  width: 15%;
-  height: auto;
+.priceContainer a.arrow-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--db);
   background-color: var(--db);
   color: var(--w);
-  text-align: center;
-  padding: 2% 0;
-  border-radius: 5px;
+  font-size: 20px;
+  border-radius: 0px 5px 5px 0px;
   text-decoration: none;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
-.priceContainer a:hover {
-  background-color: var(--bl);
+.priceContainer a.arrow-link:hover {
+  color: var(--w);
   cursor: pointer;
 }

@@ -18,16 +18,10 @@
     <main>
         <div class="intro">
             <h2>About Our Company</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur magna ac orci varius, sit amet
-                sollicitudin mauris eleifend. Nullam vel enim ac arcu fringilla feugiat vitae ac risus. Fusce commodo,
-                leo a eleifend lobortis, erat velit congue purus, eget sagittis ligula massa in leo. Mauris et augue a
-                lectus vulputate accumsan. Sed varius euismod nulla, nec posuere nisi tempus non. Integer tristique
-                aliquam tincidunt. In quis purus a tellus placerat elementum sed nec eros.</p>
-
-            <p>Phasellus vehicula ligula quis tellus facilisis, non tincidunt ex rhoncus. Vivamus accumsan nisi id enim
-                ullamcorper finibus. Nunc consequat mi in risus tincidunt, in faucibus felis auctor. Suspendisse
-                potenti. Nam pulvinar est vitae justo aliquet, eget cursus sem laoreet. Donec malesuada ultricies mi,
-                vel fringilla sapien bibendum eget.</p>
+            <p>Embark on an unforgettable journey with All Aboard, the premier train company for your next adventure! Step into a world of elegance and luxury as you traverse breathtaking landscapes, from towering mountains to picturesque valleys.</p>
+            <p>Experience impeccable service and comfort aboard our state-of-the-art trains, complete with plush seating, panoramic windows, and onboard amenities. Whether you're traveling solo, with family, or with friends, All Aboard guarantees a remarkable voyage tailored to your needs.</p>
+            <p>Escape the ordinary and immerse yourself in the allure of train travel. Enjoy gourmet cuisine prepared by renowned chefs, unwind in spacious lounges, and indulge in exclusive activities while we whisk you away to your dream destination.</p>
+            <p>Join us today and unlock a realm of possibilities. Discover new horizons, forge lasting memories, and let All Aboard transport you to a world of excitement and wonder. Don't miss out on our limited-time promotion—book your journey now and let the magic of All Aboard begin!</p>
         </div>
         <h1>Contact Us</h1>
         <p>Fill out the form below to get in touch with us.</p>
