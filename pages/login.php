@@ -17,7 +17,6 @@ if (isset($_POST['loginSubmit']))
     
         if(isset($row['role'])){
             if ($row['email'] == $email && $row['password'] == $password) {
-                $_SESSION['users-name'] = $row['name'];
                 $_SESSION['users-id'] = $row['id'];
                 $_SESSION['users-role'] = $row['role'];
         

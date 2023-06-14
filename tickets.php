@@ -1,3 +1,24 @@
+<?php
+session_start();
+$id = $_GET['id'];
+
+require_once "pages/conn.php";
+$stmt = $conn->prepare("SELECT * FROM product WHERE id = :id");
+$stmt->execute(['id' => $id]);
+$product = $stmt->fetch();
+
+$idCountry = $product['country_id'];
+
+$stmt = $conn->prepare("SELECT * FROM country WHERE id = :id");
+$stmt->execute(['id' => $idCountry]);
+$country = $stmt->fetch();
+
+$idClass = $product['class_id'];
+
+$stmt = $conn->prepare("SELECT * FROM class WHERE id = :id");
+$stmt->execute(['id' => $idClass]);
+$class = $stmt->fetch();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,30 +33,47 @@
 </head>
 
 <body>
-    
+
     <?php include 'header.php'; ?>
 
     <main>
         <div class="flexBox">
             <div class="infoBox">
                 <div class="nameBox">
-                    <p>Name</p>
+                    <p><?php echo $product['name']; ?></p>
                 </div>
-                <p>Lorem ipsum daolor sit amet, consectetur adipiscing elit. 
-                    Pellentesque euismod accumsan hendrerit.
-                    Aliquam aliquet nisi sed rutrum elementum. 
-                    Vivamus in.</p>
+                <p><?php echo $product['description']; ?></p>
+                <p>travel time of <?php echo $product['travel_time']; ?> hours</p>
+                <p>departure date of <?php echo $product['departure_date']; ?></p>
+                <p>departure time of <?php echo $product['departure_time']; ?></p>
+                <p>heading to <?php echo $country['country_name']; ?></p>
+                <p>traveling in <?php echo $class['class_name']; ?></p>
+
             </div>
             <div class="infoBox2">
                 <div class="imgContainer">
-                    <img src="/#" alt="Image">
+                    <img src="upload-product-images/<?php echo $product['image']; ?>" class="img" alt="Image" height="100%" width="100%">
                 </div>
                 <div class="otherInformation">
+                        <form action="pages/add-favorites.php" method="post">
+                            <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
+                            <button type="submit" name="submit" class="addCardButton">Add To card</button>
+                        </form>
+                        <form action="pages/add-to-card.php" method="post">
+                            <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
+                            <button class="addFavButton">Add To Favorites</button>
+                        </form>
                     <div class="priceBox">
-                        <p>(placeholder)</p>
-                    </div>
-                    <div class="seats">
-                        <p>(placeholder)</p>
+                        <?php if ($product['discount'] == 0) : ?>
+                            <p color="#FFFFFF" >€ <?php echo $product['price']; ?></p>
+                        <?php else : 
+                           $price = $product['price']; 
+                           $price = $price*$product['discount'];    
+                            
+                        ?>
+                            <p><font color=red>€ <?php echo $price; ?></font></p>
+                            <p class="oldPrice">€ <?php echo $product['price']; ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
