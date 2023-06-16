@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Aboard!</title>
-    <link rel="stylesheet" href="css/account-pages.css">
+    <link rel="stylesheet" href="css/account-info-pages.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="/#icon" type="image/x-icon">
 </head>
@@ -47,6 +47,9 @@
         </div>
         <div class="whitespaceBig"></div>
         <div class="other-container">
+        <div class="logout-button">
+                <p>logout</p>
+        </div>
             <!--maak logout zoals moet maar hou class anders css ded -->
             <div class="delete-account-button">
                 <p>delete account</p>
