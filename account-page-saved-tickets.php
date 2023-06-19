@@ -43,7 +43,9 @@
             </div>
 
             <div class="logout-button">
-                <p>logout</p>
+                <a href="pages/logout.php">
+                    <p>logout</p>
+                </a>
             </div>
 
             <div class="saved-tickets-container">
@@ -78,6 +80,7 @@
 
                 </div>
             </div>
+            
 
 
         </div>
