@@ -69,8 +69,8 @@ $data = $stmt->fetch();
                     <?php endif; ?>
                 </div>
                 <div class="change-profile-picture">
-                   <form action="add-profile-picture.php" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="profile-picture">
+                   <form name="change-profile-picture" action="pages/add-profile.php" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="profile-picture" accept="image/png, image/jpeg, image/jpg, image/gif" value="/#">
 
                    <button type="submit" name="submit">save</button>
                    </form>
