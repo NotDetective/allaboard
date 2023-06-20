@@ -8,17 +8,17 @@
     }
 
 .whitespace{
-    height: 67.5px;
+    height: 59.5px;
 }
+
 .whitespaceBig{
-    height: 200px;
+    height: 240px;
 }
 
 .information-container{
-    height: 69.4vh;
     width: auto;
     display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
@@ -26,7 +26,7 @@
 
 .options-container{
     text-decoration: none;
-    height: 40%;
+    height: auto;
     width: auto;
     color: var(--w);
 	display: flex;
@@ -106,14 +106,6 @@
 
     display: flex;
     justify-content: center;
-}
-
-.delete-account-button p{
-    width: 100%;
-    height: auto;
-    color: var(--w);
-    background-color: red;
-    margin-left: 350%;
 }
 
 .saved-tickets-container{
