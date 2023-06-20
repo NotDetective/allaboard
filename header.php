@@ -13,7 +13,7 @@
             <img src="img/PFP-Placeholder.png" alt="empty user avatar">
         </a>
         <?php else: ?>
-        <a href="account/profile.php">
+        <a href="account-page-information.php">
             <?php if(isset($_SESSION['users-avatar'])):  ?>
                 <img src="upload-user-images/<?php echo $_SESSION['users-avatar']; ?>" alt="custom user avatar">
             <?php else: ?> 

@@ -3,8 +3,8 @@ session_start();
 $id = $_GET['id'];
 
 require_once "pages/conn.php";
-$stmt = $conn->prepare("SELECT * FROM product WHERE id = :id");
-$stmt->execute(['id' => $id]);
+$stmt = $conn->prepare("SELECT * FROM product WHERE product_id= :product_id");
+$stmt->execute(['product_id' => $id]);
 $product = $stmt->fetch();
 
 $idCountry = $product['country_id'];
@@ -56,11 +56,11 @@ $class = $stmt->fetch();
                 </div>
                 <div class="otherInformation">
                         <form action= "pages/add-to-cart.php" method="post">
-                            <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
-                            <button type="submit" name="submit" class="addcartButton">Add To card</button>
+                            <input type="hidden" value="<?php echo $product['product_id']; ?>" name="id">
+                            <button type="submit" name="submit" class="addCartButton">Add To card</button>
                         </form>
                         <form action="pages/add-favorites.php" method="post">
-                            <input type="hidden" value="<?php echo $product['id']; ?>" name="id">
+                            <input type="hidden" value="<?php echo $product['product_id']; ?>" name="id">
                             <button type="submit" name="submit" class="addFavButton">Add To Favorites</button>
                         </form>
                     <div class="priceBox">
