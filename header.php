@@ -7,6 +7,7 @@
             <li><a href="about-us.php">About us</a></li>
         </ul>
     </nav>
+        <?php include'shoppingcart.php'; ?>
     <div>
         <?php if(!isset($_SESSION['users-id'])): ?>
         <a href="login-page.php">

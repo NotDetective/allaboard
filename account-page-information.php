@@ -8,8 +8,8 @@ require_once 'pages/conn.php';
 
 $id = $_SESSION['users-id'];
 
-$stmt = $conn->prepare("SELECT * FROM personal_info WHERE user_id=:user_id");
-$stmt->execute(['user_id' => $id]);
+$stmt = $conn->prepare("SELECT * FROM personal_info WHERE id=:id");
+$stmt->execute(['id' => $id]);
 $data = $stmt->fetch();
 
 ?>
@@ -54,7 +54,7 @@ $data = $stmt->fetch();
                     <div>
                         <input type="text" placeholder="Mobile Number" name="mobile-number" <?php if (isset($data['mobile_number'])) : ?> value="<?php echo $data['mobile_number']; ?>"<?php endif;  ?>  require>
                     </div>
-                    <button type="submit" name="submit" class="save-button">
+                        <button type="submit" name="submit" class="save-button">
                         <p>save</p>
                     </button>
                 </form>
@@ -69,13 +69,14 @@ $data = $stmt->fetch();
                     <?php endif; ?>
                 </div>
                 <div class="change-profile-picture">
-                   <form name="change-profile-picture" action="pages/add-profile.php" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="profile-picture" accept="image/png, image/jpeg, image/jpg, image/gif" value="/#">
-
-                   <button type="submit" name="submit">save</button>
-                   </form>
+                    <form name="change-profile-picture" action="pages/add-profile.php" method="POST" enctype="multipart/form-data">
+                    
+                        <input type="file" name="profile-picture" accept="image/png, image/jpeg, image/jpg, image/gif" value="/#">
+                    
+                        <button type="submit" name="submit">save</button>
+                    </form>
                 </div>
-            </div>
+            </div>  
         </div>
         <div class="whitespaceBig"></div>
         <div class="other-container">

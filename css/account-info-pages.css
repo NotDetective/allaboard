@@ -8,20 +8,20 @@
     }
 
 .whitespace{
-    height: 59.5px;
+    height: 56.5px;
 }
 
 .whitespaceBig{
-    height: 240px;
+    height: 228px;
 }
 
 .information-container{
     width: auto;
     display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .options-container{
@@ -29,12 +29,12 @@
     height: auto;
     width: auto;
     color: var(--w);
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
 }
 
 .options-container a{
@@ -68,16 +68,25 @@
     border-radius: 3px;
 }
 
+.profile-picture-container{
+  width: 33%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
 .account-information-container div p{
     color: var(--w);
     margin-left: 2%;
 }
 
 .change-profile-picture{
-    margin-right: 200%;
     background-color: var(--lb);
     margin-bottom: 10%;
-    width: 105%;
+    width: auto;
     height: 10%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
@@ -85,14 +94,22 @@
 
 .other-container{
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.profile-picture{
-    margin-left: 30%;
+.profile-picture{ 
+    height: 200px;
+    width: 250px;
+}
+
+.profile-picture img{
+  height: 100%;
+  width: 100%
 }
 
 .logout-button{
@@ -108,122 +125,57 @@
     justify-content: center;
 }
 
-.saved-tickets-container{
-    height: 400px;
-    width: 50%;
-
-    background-color: var(--b);
-    border-radius: 20px;
-
-    display: flex;
-	justify-content: center;
-	align-items: center;
+.profile-picture-frame{
+  height: 10%;
+  width: 10%;
+  background-color: aqua;
 }
 
-.saved-tickets-scroller{
-    height: 80%;
-    width: 80%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: flex-start;
-}
-
-.saved-ticket{
-    margin-top: 2%; 
-
-    border-radius: 20px;
-    width: 99%;
-    height: 100px;
-    background-color: var(--bl);
-    color: var(--w);
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: stretch;
-}
-
-.ticketPlaceholder {
-    border: 0vh solid white;
-    width: 85%;
-    max-width: 85%;
-    border-radius: 20px;
-    margin-top: 2%; 
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .imgholder{   
-    height: 100%;
-    width: 20%;
-  }
-
-  .imgholder img{
-    height: 100%;
-    width: 100%;
-  }
-
-  
-  .ticketInfo{
-    margin-left: 5%;
-    color: var(--w);
-  }
-  
-  .description{
-    width: 40%;
-  }
-  
-  .priceContainer {
-    margin-left: 20%;
-    display: flex;
-    flex-direction: row;
-	justify-content: center;
+.save-button {
+  height: 30px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
 	align-items: center;
 	align-content: center;
-    width: 50%;
-    height: 30%;
-    margin-right: 5%;
-    background-color: var(--bl);
-    border: 3px solid var(--db);
-    border-radius: 5px;
-  }
-  
-  .priceContainer p {
-    margin: 0;
-    padding: 10px;
-    color: var(--g);
-    font-weight: bold;
-  }
-  
-  .priceContainer a.arrow-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--db);
-    background-color: var(--db);
-    color: var(--w);
-    font-size: 20px;
-    border-radius: 0px 5px 5px 0px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .priceContainer a.arrow-link:hover {
-    background-color: var(--bl);
-    border-color: var(--bl);
-    color: var(--w);
-    cursor: pointer;
-  }
+  background-color: var(--bw);
+  color: var(--bl);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  .space{
-    height: 20vh;
+.save-button:hover {
+  background-color: var(--bl);
+  color: var(--w);
+  transform: scale(1.1) rotate(360deg);
+  box-shadow: 0 0 10px 5px var(--bl);
+  background-position: right center;
+  animation: pulse 0.6s infinite;
+}
 
+.save-button:focus {
+  outline: none;
+  transform: scale(1.1);
+}
+
+.save-button:active {
+  transform: scale(0.9);
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      box-shadow: 0 0 0px 0px var(--bl);
   }
+  50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 20px 10px var(--bl);
+  }
+  100% {
+      transform: scale(1);
+      box-shadow: 0 0 0px 0px var(--bl);
+  }
+}
