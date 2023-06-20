@@ -35,10 +35,6 @@ if (isset($_GET['searchName']) && $_GET['name'] != null) {
     $starting_price = (float)$_GET['starting-price'];
     $max_price = (float)$_GET['max-price'];
 
-    var_dump($starting_price);
-
-    var_dump($max_price);
-
     $stmt = $conn->prepare("SELECT * FROM product WHERE price BETWEEN :starting_price AND :max_price");
     $stmt->execute([':starting_price' => $starting_price, ':max_price' => $max_price]);
 
