@@ -12,7 +12,7 @@
 }
 
 .whitespaceBig{
-    height: 244px;
+    height: 240px;
 }
 
 .information-container{
@@ -26,7 +26,7 @@
 
 .options-container{
     text-decoration: none;
-    height: 40%;
+    height: auto;
     width: auto;
     color: var(--w);
 	display: flex;
@@ -96,7 +96,6 @@
 }
 
 .logout-button{
-    margin-left: -18%;
     width: 100px;
     height: 50px;;
 
@@ -107,14 +106,6 @@
 
     display: flex;
     justify-content: center;
-}
-
-.delete-account-button p{
-    width: 100%;
-    height: auto;
-    color: var(--w);
-    background-color: red;
-    margin-left: 270%;
 }
 
 .saved-tickets-container{

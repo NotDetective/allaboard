@@ -47,13 +47,9 @@
         </div>
         <div class="whitespaceBig"></div>
         <div class="other-container">
-        <div class="logout-button">
-                <p>logout</p>
-        </div>
-            <!--maak logout zoals moet maar hou class anders css ded -->
-            <div class="delete-account-button">
-                <p>delete account</p>
-            </div>
+            <div class="logout-button">
+                    <p>logout</p>
+            </div> 
         </div>
         <div class="whitespace"></div>
     </main>

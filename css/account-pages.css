@@ -7,12 +7,8 @@
     --db: #201E50;
     }
 
-*{
-    border: 2px solid greenyellow ;
-}
-
 .whitespace{
-    height: 59.5px;
+    height: 67.5px;
 }
 .whitespaceBig{
     height: 200px;
