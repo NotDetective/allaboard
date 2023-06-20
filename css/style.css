@@ -36,18 +36,13 @@ header{
 
 }
 
-header h1{
-    margin-left: -12%;
-}
-
 header ul{
-    margin-left: -10%;
     width: 50vw;
 
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	align-content: center;
 }
@@ -60,7 +55,6 @@ header div{
     border-radius: 100px;
     width: 1.8%;
     height: 80%;
-    margin-right: -12%;
 }
 
 header div img{
@@ -151,4 +145,38 @@ footer a {
     footer li {
         margin: 10px 0;
     }
+}
+
+.dropbtn{
+    height: 60px;
+    width: 160px;
+}
+.dropbtn img{
+    height: 100%;
+    width: 40%;
+}
+
+.dropbtn:hover{
+    cursor: pointer;
+    animation: popout 0.6s forwards;
+}
+
+@keyframes popout {
+    0% {
+        transform: scale(1);
+        border-radius: 5px;
+
+    }
+    100% {
+
+        transform: scale(1.2);
+    }
+}
+
+#cart.hide {
+    display: none;
+}
+
+#cart.show {
+    display: block;
 }
