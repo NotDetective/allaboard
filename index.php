@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['users-role'])) {
+    $_SESSION['users-role'] = null;
+}
+
+$admin = 1;
+
 require_once 'pages/conn.php';
 
 if (isset($_GET['searchName']) && $_GET['name'] != null) {
@@ -133,6 +139,11 @@ if (!isset($row)) {
                             <p class='time'> <?php echo $row['departure_time']; ?> </p>
                         </div>
                         <div class='priceContainer'>
+                            <?php if($_SESSION['users-role'] == $admin): ?>
+                                <a href="admin-pages/edit-product-page.php?id=<?php echo $row['product_id'] ?>">
+                                    <img src="img/edit-icon.png" alt="edit icon">
+                                </a>
+                            <?php endif; ?>
                             <p> € <?php echo $row['price']; ?></p>
                             <a class='arrow-link' href='tickets.php?id=<?php echo $row['product_id'] ?>'> > </a>
                         </div>

@@ -5,9 +5,9 @@ require '../pages/conn.php';
 $id = (int)$_GET['id'];
 
 
-$stmt = $conn->prepare("SELECT * FROM product WHERE id=:id");
+$stmt = $conn->prepare("SELECT * FROM product WHERE product_id=:product_id");
 
-$stmt->execute(['id' => $id]);
+$stmt->execute(['product_id' => $id]);
 $row = $stmt->fetch();
 
 $stmt = $conn->prepare("SELECT * FROM country");
@@ -133,16 +133,18 @@ if (isset($_POST["submit"])) {
                     'departure_time' => $departure_time,
                     'class_id' => $class_id,
                     'image' => $fileName,
-                    'id' => $id
+                    'product_id' => (int)$id
                 ];
 
 
                 $sql = "UPDATE product SET name=:name, description=:description, price=:price, discount=:discount, travel_time=:travel_time, 
                 country_id=:country_id, departure_date=:departure_date, departure_time=:departure_time, class_id=:class_id, image=:image
-                WHERE id=:id";
+                WHERE product_id=:product_id";
 
 
                 $stmt = $conn->prepare($sql);
+
+                var_dump($data);
 
                 $stmt->execute($data);
 
