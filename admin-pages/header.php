@@ -1,5 +1,5 @@
 <header>
-    <h1 class="titel"><a href="index.php">All Aboard!</a></h1>
+    <h1 class="titel"><a href="../index.php">All Aboard!</a></h1>
     <nav>
         <ul>
             <li><a href="../index.php">Tickets</a></li>

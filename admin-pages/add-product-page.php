@@ -24,7 +24,7 @@ $class = $stmt->fetchAll();
 </head>
 
 <body>
-    <?php include '../header.php' ?>
+    <?php include 'header.php' ?>
 
     <form id="add-product-form" name="add-product" action="pages/add-product.php" method="POST"
         enctype="multipart/form-data">
@@ -87,7 +87,7 @@ $class = $stmt->fetchAll();
             <h1>please make sure that all the fields are filled in</h1>
             <button onclick="closeDialog();"><h1>OK</h1"></button>
         </dialog>
-            <?php include '../footer.php' ?>
+            <?php include 'footer.php' ?>
         <script src="../js/add-product.js"></script>
 </body>
 
