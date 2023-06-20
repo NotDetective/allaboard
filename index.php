@@ -32,8 +32,8 @@ if (isset($_GET['searchName']) && $_GET['name'] != null) {
     $row = $stmt->fetchAll();
 } elseif (isset($_GET['searchPrice'])) {
 
-    $starting_price = (double)$_GET['starting-price'];
-    $max_price = (double)$_GET['max-price'];
+    $starting_price = (float)$_GET['starting-price'];
+    $max_price = (float)$_GET['max-price'];
 
     var_dump($starting_price);
 
@@ -43,7 +43,6 @@ if (isset($_GET['searchName']) && $_GET['name'] != null) {
     $stmt->execute([':starting_price' => $starting_price, ':max_price' => $max_price]);
 
     $row = $stmt->fetchAll();
-
 } else {
 
     $stmt = $conn->prepare("SELECT * FROM product");
@@ -81,7 +80,7 @@ if (!isset($row)) {
                     <div>
                         <!-- search bar -->
                         <form action="index.php" id="searchNameForm">
-                            <input id="inputNameSearch" type="text" name="name" placeholder="enter name" <?php if (isset($_GET['name'])): ?> value="<?php echo $_GET['name']; ?>" <?php endif; ?> require>
+                            <input id="inputNameSearch" type="text" name="name" placeholder="enter name" <?php if (isset($_GET['name'])) : ?> value="<?php echo $_GET['name']; ?>" <?php endif; ?> require>
 
                             <button name="searchName" value="true">search</button>
                         </form>
@@ -90,9 +89,9 @@ if (!isset($row)) {
                     <div>
                         <!-- dates -->
                         <form action="index.php">
-                            <input type="date" name="starting-date" placeholder="enter starting date" <?php if (isset($_GET['starting-date'])): ?> value="<?php echo $_GET['starting-date']; ?>" <?php endif; ?>  require>
+                            <input type="date" name="starting-date" placeholder="enter starting date" <?php if (isset($_GET['starting-date'])) : ?> value="<?php echo $_GET['starting-date']; ?>" <?php endif; ?> require>
 
-                            <input type="date" name="ending-date" placeholder="enter ending date" <?php if (isset($_GET['ending-date'])): ?> value="<?php echo $_GET['ending-date']; ?>" <?php endif; ?>   require>
+                            <input type="date" name="ending-date" placeholder="enter ending date" <?php if (isset($_GET['ending-date'])) : ?> value="<?php echo $_GET['ending-date']; ?>" <?php endif; ?> require>
 
                             <button type="submit" name="searchDate" value="true">search</button>
                         </form>
@@ -101,9 +100,9 @@ if (!isset($row)) {
                     <div>
                         <!-- prices -->
                         <form action="index.php">
-                            <input type="number" name="starting-price" placeholder="enter starting price" <?php if (isset($_GET['starting-price'])): ?> value="<?php echo $_GET['starting-price']; ?>" <?php endif; ?> require>
+                            <input type="number" name="starting-price" placeholder="enter starting price" <?php if (isset($_GET['starting-price'])) : ?> value="<?php echo $_GET['starting-price']; ?>" <?php endif; ?> require>
 
-                            <input type="number" name="max-price" placeholder="enter max price" <?php if (isset($_GET['max-price'])): ?> value="<?php echo $_GET['max-price']; ?>" <?php endif; ?> require>
+                            <input type="number" name="max-price" placeholder="enter max price" <?php if (isset($_GET['max-price'])) : ?> value="<?php echo $_GET['max-price']; ?>" <?php endif; ?> require>
 
                             <button type="submit" name="searchPrice" value="true">search</button>
                         </form>
@@ -117,6 +116,12 @@ if (!isset($row)) {
         </div>
 
         <div class="containerTicket">
+
+            <?php if ($_SESSION['users-role'] == $admin) : ?>
+                <button onclick="location.href='admin-pages/add-product-page.php'">
+                    <h1> Add Ticket </h1>
+                </button>
+            <?php endif; ?>
 
             <div class="ticketPlaceholder"></div>
 
@@ -139,7 +144,7 @@ if (!isset($row)) {
                             <p class='time'> <?php echo $row['departure_time']; ?> </p>
                         </div>
                         <div class='priceContainer'>
-                            <?php if($_SESSION['users-role'] == $admin): ?>
+                            <?php if ($_SESSION['users-role'] == $admin) : ?>
                                 <a href="admin-pages/edit-product-page.php?id=<?php echo $row['product_id'] ?>">
                                     <img src="img/edit-icon.png" alt="edit icon">
                                 </a>
