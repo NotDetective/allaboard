@@ -57,10 +57,76 @@ main{
 }
 
 .overlayss div{
-  height: 80%;
+  height: 90%;
   width: 15%;
-  background-color: var(--bl);
   border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.overlayss form{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+
+.overlayss input {
+  height: 20px;
+  background-color: var(--lb);
+  border: none;
+  padding: 10px;
+  color: var(--bl);
+  font-size: 14px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.overlayss input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.overlayss button {
+  background-color: var(--w);
+  color: var(--db);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overlayss button:hover {
+  background-color: var(--lb);
+}
+
+.overlayss input{
+  background-color: var(--lb);
+}
+
+.addTicketButtons button{
+  margin-top: 5%;
+  background-color: var(--lb);
+  color: var(--db);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+.addTicketButtons button:hover {
+  background-color: var(--db);
+  color: var(--w);
 }
 
 .containerTicket {

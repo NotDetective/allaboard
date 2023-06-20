@@ -82,7 +82,7 @@ if (!isset($row)) {
                         </form>
                     </div>
 
-                    <div>
+                    <div class="dates-flexbox">
                         <!-- dates -->
                         <form action="index.php">
                             <input type="date" name="starting-date" placeholder="enter starting date" <?php if (isset($_GET['starting-date'])) : ?> value="<?php echo $_GET['starting-date']; ?>" <?php endif; ?> require>
@@ -112,12 +112,13 @@ if (!isset($row)) {
         </div>
 
         <div class="containerTicket">
-
+        <div class="addTicketButtons">     
             <?php if ($_SESSION['users-role'] == $admin) : ?>
                 <button onclick="location.href='admin-pages/add-product-page.php'">
                     <h1> Add Ticket </h1>
                 </button>
             <?php endif; ?>
+        </div>   
 
             <div class="ticketPlaceholder"></div>
 
