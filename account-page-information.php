@@ -81,7 +81,9 @@ $data = $stmt->fetch();
         <div class="whitespaceBig"></div>
         <div class="other-container">
             <div class="logout-button">
-                    <p>logout</p>
+                <a href="pages/logout.php">
+                    <font color ="white"><p>logout</p></font>
+                </a>
             </div> 
         </div>
         <div class="whitespace"></div>
