@@ -70,7 +70,7 @@
                         <div>
                             <p class='class'>class: <?php echo $class['class_name']; ?></p>
                             <div class='priceContainer'>
-                                <p>€ <?php echo $row['price'] ?></p>
+                                <p>€<?php echo $row['price'] ?></p>
                                 <a class='arrow-link' href='tickets.php?id=<?php echo $row['product_id']; ?>'>></a>
                             </div>
                         </div>
