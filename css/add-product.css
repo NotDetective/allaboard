@@ -39,10 +39,11 @@
 }
 
 .center{
-    height: 8.1vh;
+    height: 80px;
     display: flex;
 	justify-content: center;
 	align-items: center;
+    align-content: center;
 }
 
 .price-box{

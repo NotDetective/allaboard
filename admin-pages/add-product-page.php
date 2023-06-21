@@ -79,7 +79,7 @@ $class = $stmt->fetchAll();
             </div>
             <div class="center">
                 <input type="submit" name="submit" value="Add Product" onclick="checkIfEmpty();" onmouseover="showSpinner();" onmouseout="hideSpinner();">
-            </div>
+        </div>
         </form>
 
 

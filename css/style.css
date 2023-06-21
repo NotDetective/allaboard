@@ -14,6 +14,9 @@
 }
 
 body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     margin-left: 0%;
     margin-top: 0%;
@@ -101,6 +104,7 @@ header div img{
 }
 
 footer {
+    margin-top: auto;
     background-color: var(--bl);
     color: var(--w);
     padding: 20px;
