@@ -191,8 +191,8 @@ main{
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 50px;
   margin-right: 5%;
   background-color: var(--bl);
   border: 3px solid var(--db);
@@ -200,7 +200,8 @@ main{
   }
 
 .priceContainer p {
-  margin: 0;
+  font-size: 100%;
+  margin: auto;
   padding: auto;
   color: var(--g);
   font-weight: bold;
@@ -210,8 +211,8 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: auto;
+  width: 30%;
+  height: 100%;
   border: 2px solid var(--db);
   background-color: var(--db);
   color: var(--w);
@@ -227,4 +228,14 @@ main{
 }
 .edit{
   padding: auto;
+}
+
+.box-link{
+  height: 100%;
+  width: 100%;
+  padding: auto;
+}
+
+.edit-link{
+  height: 100%;
 }

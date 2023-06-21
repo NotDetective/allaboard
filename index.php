@@ -141,11 +141,11 @@ if (!isset($row)) {
                             <p class='time'> <?php echo $row['departure_time']; ?> </p>
                         </div>
                         <div class='priceContainer'>
-                            <?php if ($_SESSION['users-role'] == $admin) : ?>
-                                <a href="admin-pages/edit-product-page.php?id=<?php echo $row['product_id'] ?>">
-                                    <img src="img/edit-icon.png" alt="edit icon">
-                                </a>
-                            <?php endif; ?>
+                        <?php if ($_SESSION['users-role'] == $admin) : ?>
+                            <a class="box-link" href="admin-pages/edit-product-page.php?id=<?php echo $row['product_id']; ?>">
+                                <img class="edit-link" src="img/edit-icon.png" alt="editicon">
+                            </a>
+                        <?php endif; ?>
                             <p> €<?php echo $row['price']; ?></p>
                             <a class='arrow-link' href='tickets.php?id=<?php echo $row['product_id'] ?>'> > </a>
                         </div>

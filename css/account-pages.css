@@ -188,13 +188,13 @@
   }
   
   .priceContainer {
-    margin-left: 20%;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-    width: 50%;
+    width: 75%;
     height: 30%;
     margin-right: 5%;
     background-color: var(--bl);
@@ -213,8 +213,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 30%;
+    height: 100%;
     border: 2px solid var(--db);
     background-color: var(--db);
     color: var(--w);
