@@ -50,8 +50,53 @@ header ul{
 	align-content: center;
 }
 
-header a{
+header a {
     color: var(--w);
+    text-decoration: none;
+}
+
+header a:hover{
+    animation: rainbow 2s infinite;
+    animation: puls 2s infinite;
+}
+
+@keyframes rainbow {
+    0% {
+      color: red;
+    }
+    14% {
+      color: orange;
+    }
+    28% {
+      color: yellow;
+    }
+    42% {
+      color: green;
+    }
+    57% {
+      color: rgb(255, 255, 255);
+    }
+    71% {
+      color: rgb(0, 213, 255);
+    }
+    85% {
+      color: violet;
+    }
+    100% {
+      color: red;
+    }
+}
+
+@keyframes puls{
+    0%{
+        font-size: 100%;
+    }
+    50%{
+        font-size: 200%;
+    }
+    100%{
+        font-size: 100%;
+    }
 }
 
 header div{
