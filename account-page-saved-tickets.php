@@ -44,7 +44,7 @@
 
             <div class="logout-button">
                 <a href="pages/logout.php">
-                    <p>logout</p>
+                    <font color ="white"><p>logout</p></font>
                 </a>
             </div>
 

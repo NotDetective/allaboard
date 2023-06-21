@@ -8,3 +8,4 @@
         </ul>
     </div>
 </footer>
+<script src="js/shopping-cart.js"></script>

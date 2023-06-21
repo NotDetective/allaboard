@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         'product_id' => $product_id,
     ];
 
-    $stmt = $conn->prepare("SELECT * FROM bookings WHERE user_id = :user_id AND product_id = :product_id");
+    $stmt = $conn->prepare("SELECT * FROM bookings WHERE user_id =:user_id AND product_id = :product_id");
     $stmt->execute($data);
     $row = $stmt->fetch();
 
@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
         $stmt = $conn->prepare($sql);
         $stmt->execute($data);
     }
+    var_dump($row);
 
     header("Location: ../tickets.php?id=$product_id");
 }

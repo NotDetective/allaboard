@@ -1,3 +1,4 @@
+
 <header>
     <h1 class="titel"><a href="index.php">All Aboard!</a></h1>
     <nav>
@@ -7,7 +8,11 @@
             <li><a href="about-us.php">About us</a></li>
         </ul>
     </nav>
-        <?php include'shoppingcart.php'; ?>
+        <?php 
+        if (isset($_SESSION['users-role'])) { 
+            include'shoppingcart.php';
+        } 
+        ?>
     <div>
         <?php if(!isset($_SESSION['users-id'])): ?>
         <a href="login-page.php">
