@@ -29,48 +29,57 @@ $class = $stmt->fetchAll();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Aboard!</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/add-product.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/#icon" type="image/x-icon">
 </head>
 
 <body>
+    <?php include 'header.php' ?>
 
     <form id="add-product-form" name="add-product" action="edit-product-page.php?id=<?php echo $_GET['id']; ?>" method="POST" enctype="multipart/form-data">
+        <div class="flexbox">
+            <div class="left-side">
+            <!-- every thing in the form can be moved if needed -->
+    
+                <input add_product_input type="text" name="product-name" placeholder="Product Name" value="<?php echo $row['name']; ?>">
 
-        <!-- every thing in the form can be moved if needed -->
+                <textarea add_product_input cols="30" rows="10" name="product-description" placeholder="Product Description" placeholder="Product Description"><?php echo $row['description']; ?></textarea>
 
-        <input add_product_input type="text" name="product-name" placeholder="Product Name" value="<?php echo $row['name']; ?>">
+                <input add_product_input type="number" name="travel-time" placeholder="travel-time" step="0.01" value="<?php echo $row['travel_time']; ?>">
 
-        <textarea add_product_input cols="30" rows="10" name="product-description" placeholder="Product Description" placeholder="Product Description"><?php echo $row['description']; ?></textarea>
+                <select name="class_options" id="class-options">
+                    <?php foreach ($class as $c) :  ?>
+                        <option value="<?php echo $c['id']; ?>"> <?php echo $c['class_name']; ?></option>
+                    <?php endforeach ?>
+                </select>
 
-        <input add_product_input type="number" name="product-price" placeholder="Product Price" step="0.01" value="<?php echo $row['price']; ?>">
+                <select name="country_options" id="country-options">
+                    <?php foreach ($country as $land) :  ?>
+                        <option value="<?php echo $land['id']; ?>"> <?php echo $land['country_name']; ?></option>
+                    <?php endforeach ?>
+                </select>
 
-        <input type="number" name="product-discount" placeholder="Product Discount" step="0.01" value="<?php echo $row['discount'] * 100; ?>">
+                <input add_product_input type="date" name="departure-date" placeholder="Departure date" value="<?php echo $row['departure_date']; ?>">
 
-        <input add_product_input type="number" name="travel-time" placeholder="travel-time" step="0.01" value="<?php echo $row['travel_time']; ?>">
+                <input add_product_input type="time" name="departure-time" placeholder="Departure Time" value="<?php echo $row['departure_time']; ?>">
 
-        <select name="class_options" id="class-options">
-            <?php foreach ($class as $c) :  ?>
-                <option value="<?php echo $c['id']; ?>"> <?php echo $c['class_name']; ?></option>
-            <?php endforeach ?>
-        </select>
+            </div>
+            <div class="right-side">
+                <img src="../upload-product-images/<?php echo $row['image']; ?>" alt="uploaded image" width="auto" height="200px">
+                
+                <input add_product_input type="file" name="product-image" accept="image/png, image/jpeg, image/jpg, image/gif">
+                <div class="price-box">
+                    <input add_product_input type="number" name="product-price" placeholder="Product Price" step="0.01" value="<?php echo $row['price']; ?>">
 
-        <select name="country_options" id="country-options">
-            <?php foreach ($country as $land) :  ?>
-                <option value="<?php echo $land['id']; ?>"> <?php echo $land['country_name']; ?></option>
-            <?php endforeach ?>
-        </select>
-
-        <input add_product_input type="date" name="departure-date" placeholder="Departure date" value="<?php echo $row['departure_date']; ?>">
-
-        <input add_product_input type="time" name="departure-time" placeholder="Departure Time" value="<?php echo $row['departure_time']; ?>">
-
-
-        <img src="../upload-product-images/<?php echo $row['image']; ?>" alt="uploaded image" width="auto" height="200px">
-
-        <input add_product_input type="file" name="product-image" accept="image/png, image/jpeg, image/jpg, image/gif">
-
-        <input type="submit" name="submit" value="Update Product">
+                    <input type="number" name="product-discount" placeholder="Product Discount" step="0.01" value="<?php echo $row['discount'] * 100; ?>">
+                </div>
+            </div>
+        </div>
+            <div class="center">
+                <input type="submit" name="submit" value="Update Product">
+            </div>
     </form>
     <?php
     if (isset($_SESSION['statusMsgEditProduct'])) {
@@ -78,7 +87,7 @@ $class = $stmt->fetchAll();
     }
     $_SESSION['statusMsgEditProduct'] = "";
     ?>
-
+        <?php include 'footer.php' ?>
 </body>
 
 </html>
