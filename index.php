@@ -146,7 +146,7 @@ if (!isset($row)) {
                                     <img src="img/edit-icon.png" alt="edit icon">
                                 </a>
                             <?php endif; ?>
-                            <p> € <?php echo $row['price']; ?></p>
+                            <p> €<?php echo $row['price']; ?></p>
                             <a class='arrow-link' href='tickets.php?id=<?php echo $row['product_id'] ?>'> > </a>
                         </div>
                     </div>
