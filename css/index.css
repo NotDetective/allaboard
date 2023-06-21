@@ -191,8 +191,8 @@ main{
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 10%;
-  height: 10%;
+  width: auto;
+  height: auto;
   margin-right: 5%;
   background-color: var(--bl);
   border: 3px solid var(--db);
@@ -201,7 +201,7 @@ main{
 
 .priceContainer p {
   margin: 0;
-  padding: 10px;
+  padding: auto;
   color: var(--g);
   font-weight: bold;
 }
@@ -210,8 +210,8 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: auto;
   border: 2px solid var(--db);
   background-color: var(--db);
   color: var(--w);
@@ -224,4 +224,7 @@ main{
 .priceContainer a.arrow-link:hover {
   color: var(--w);
   cursor: pointer;
+}
+.edit{
+  padding: auto;
 }
